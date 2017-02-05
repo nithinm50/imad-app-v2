@@ -1,6 +1,7 @@
 console.log('Loaded!');
 var nameinput= document.getElementById('name');
 var name = nameinput.value;
+console.log(name);
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     console.lod("inside");
@@ -11,7 +12,7 @@ submit.onclick = function(){
     }
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
-    };
+};
 //     request.open('GET', "http://nithinm50.imad.hasura-app.io/submit-name?name="+ name, true);
 //     request.send(null);
 // };
