@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var nameInput= document.getElementById("name");
+var nameInput= document.getElementById("inputname");
 var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
