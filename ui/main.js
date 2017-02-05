@@ -1,14 +1,14 @@
 console.log('Loaded!');
-var nameInput= document.getElementById("inputname");
+var nameinput= document.getElementById('inputname');
 var name = nameInput.value;
-var submit = document.getElementById("submit_btn");
+var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
                 var names =['name1','name2', 'name3'];
                 var list = '';
-                for(var i=0;i<name.length; i++){
+                for(var i=0;i<names.length; i++){
                     list +='<li>'+ names[i] +'</li>';     
                 }
-                var ul = document.getElementById("namelist");
+                var ul = document.getElementById('namelist');
                 ul.innerHTML = list;
     };
 //     request.open('GET', "http://nithinm50.imad.hasura-app.io/submit-name?name="+ name, true);
