@@ -9,7 +9,7 @@ submit.onclick = function(){
                     list +='<li>'+ names[i] +'</li>';     
                 }
                 var ul = document.getElementById("namelist");
-                ul.innerHTML=list;
+                ul.innerHTML = list;
     };
 //     request.open('GET', "http://nithinm50.imad.hasura-app.io/submit-name?name="+ name, true);
 //     request.send(null);
