@@ -4,7 +4,7 @@ var name = nameinput.value;
 console.log(name);
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
-    console.lod("inside");
+    console.log("inside");
     var names =['name1','name2', 'name3'];
     var list = '';
     for(var i=0;i<names.length; i++){
