@@ -13,38 +13,6 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-var articles = {
-    'article-one':{
-        title:'Article One | Nithin',
-        heading: 'Article one',
-        date: 'feb 4 2017',
-        content: `
-        <p> hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1 hello this article 1 para 1
-        </p>
-        <p> hello this article 1 para 2 hello this article 1 para 2 hello this article 1 para 2 hello this article 1 para 2hello this article 1 para 2 hello this article 1 para 2 hello this article 1 para 2 hello this article 1 para 2 hello this article 1 para 2 hello this article 1 para 2
-        </p>
-        <p> hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3 hello this article 1 para 3
-        </p>`
-    },
-    'article-two':{
-        title:'Article Two | Nithin',
-        heading: 'Article Two',
-        date: 'feb 12 2017',
-        content: `
-        <p> hello this article 2 para 1 </p>
-        <p> hello this article 2 para 2 </p>
-        <p> hello this article 2 para 3 </p>`
-    },
-    'article-three':{
-        title:'Article Three | Nithin',
-        heading: 'Article Three',
-        date: 'feb 18 2017',
-        content: `
-        <p> hello this article 3 para 1 </p>
-        <p> hello this article 3 para 2 </p>
-        <p> hello this article 3 para 3 </p>`
-    }
-};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
