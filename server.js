@@ -90,7 +90,6 @@ app.get('/article/:articleName', function (req, res) {
              }
          }
     });
-    
 });
 
 app.get('/ui/style.css', function (req, res) {
