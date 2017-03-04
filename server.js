@@ -8,7 +8,7 @@ var config = {
     user: 'nithinm50',
     port:'5432',
     database: 'nithinm50',
-    password: process.env.DB_PASSWORD
+    password: 'db-nithinm50-79830',
 };
 
 var app = express();
