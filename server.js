@@ -7,7 +7,7 @@ var config = {
     user: 'nithinm50',
     database: 'nithinm50',
     host: 'db.imad.hasura-app.io',
-    port:'8080',
+    port:'5432',
     password: process.env.DB_PASSWORD
 };
 
