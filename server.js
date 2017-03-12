@@ -73,13 +73,13 @@ function createTemplate(data) {
 }
 
 function hash(input, salt){
-	var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+	var hashed = crypto.pbkdf2Sync( input, salt, 100000, 512, 'sha512')
 	return hashed.toString('hex');
 }
 
-app.get('/hash/:input',function(req, res){
-	var hashedstring = hash(req.params.input, 'this-is-some-random-string');
-	req.send(hashedstring);
+app.get('/hash/:input', function(req, res){
+	var hashedString = hash(req.params.input, 'this-is-some-random-string');
+	req.send(hashedString);
 });
 
 var names =[];
