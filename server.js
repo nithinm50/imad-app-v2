@@ -107,7 +107,7 @@ app.post('/create-user' ,function (req ,res){
 app.post('/login',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-	pool.query('select * from "user" where username = $1', [username], function(err, result){
+	pool.query('SELECT * FROM "user" WHERE username = $1',[username], function(err, result){
 	if(err){
 		res.status(500).send(err.toString());
 		} else {
@@ -116,7 +116,7 @@ app.post('/login',function(req,res){
 		    }
 		    else{
 		        var dbString = result.rows[0].password;
-		        var salt = dbString.split("$")[2];
+		        var salt = dbString.split('$')[2];
 		        var hashedPassword = hash(password, salt);
 		        if(hasedPassword === dbString){
 		            res.send("credentials are matching");
