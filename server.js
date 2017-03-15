@@ -105,6 +105,7 @@ app.post('/create-user' ,function (req ,res){
 });
 
 app.post('/login', function(req,res){
+    res.send("inside the function");
     var username = req.body.username;
     var password = req.body.password;
 	pool.query('SELECT * FROM "usertable" WHERE username = $1',[username], function(err, result){
@@ -112,7 +113,7 @@ app.post('/login', function(req,res){
 		res.status(500).send(err.toString());
 		} else {
 		    if(result.rows.length === 0){
-		        res.status(403).send("invalid username/password");
+		        res.status(403).send("user not found");
 		    }
 		    else{
 		        var dbString = result.rows[0].password;
