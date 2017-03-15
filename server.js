@@ -117,11 +117,11 @@ app.post('/login',function(req,res){
 		    else{
 		        var dbString = result.rows[0].password;
 		        var salt = dbString.split("$")[2];
-		        var hashedPassword = hash(password, hash);
+		        var hashedPassword = hash(password, salt);
 		        if(hasedPassword === dbString){
 		            res.send("credentials are matching");
 		        } else {
-		            res.status(400).send("invalid username/password");
+		            res.status(403).send("invalid username/password");
 		        }
 		    }
 		}
