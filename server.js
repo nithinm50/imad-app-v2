@@ -105,7 +105,6 @@ app.post('/create-user' ,function (req ,res){
 });
 
 app.post('/login', function(req,res){
-    res.send("inside the function");
     var username = req.body.username;
     var password = req.body.password;
 	pool.query('SELECT * FROM "usertable" WHERE username = $1',[username], function(err, result){
