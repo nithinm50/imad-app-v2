@@ -18,8 +18,8 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
-    secret: 'someRandomValue',
-    cookie: { maxAge: 1000*60*60*24*30}
+    secret: 'someRandomSecretValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 
 app.get('/', function (req, res) {
@@ -125,7 +125,7 @@ app.post('/login', function(req,res){
 		        var hashedPassword = hash(password, salt);
 		        if(hashedPassword === dbString){
 		        //set session vale
-                req.session.auth = {userID: result.rows[0].id};
+                req.session.auth = {userId: result.rows[0].id};
                 //set cookie with a session id
                 // internally on server side it maps the session id to an object
                 //{auth:{userId}}
