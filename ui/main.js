@@ -24,7 +24,7 @@ submit.onclick = function(){
     request.send(null);
 };
 // login form
-var submit = document.getElementById('submit_btn');
+var submit = document.getElementById('submit_btn1');
 submit.onclick = function(){
     console.log("inside");
     var request = new XMLHttpRequest();
