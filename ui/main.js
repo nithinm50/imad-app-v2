@@ -44,8 +44,7 @@ submit.onclick = function(){
     var username= document.getElementById('username').value;
     var password= document.getElementById('password').value;
     var username1= document.getElementById('username').value;
-    console.log("username1");
-    console.log('password');
+    console.log("username1.value");
     request.open('POST', "http://nithinm50.imad.hasura-app.io/login", true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username: username, password: password}));
